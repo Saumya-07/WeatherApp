@@ -19,10 +19,11 @@ body{
     padding: 30px;
     border: 5px solid #0000001d;
     box-shadow: 4px 4px 10px #414040;
+    /* width: min(500px,100%); */
 }
 .location{
     height: 10vh;
-    /* width: 50%; */
+    width: max-content;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -44,11 +45,11 @@ button.search {
     border: none;
     outline:none;
     border-radius: 999em;
-    padding: 15px;
+    padding: 1.5em;
     background: #0000001d;
     color: grey;
     transform: 0.2s ease-in-out;
-    margin: 0px 20px;
+    margin: 0px 2em;
 }
 svg{
     font-size: 20px;
@@ -77,4 +78,11 @@ h2{
     /* margin-top: 20px; */
     
     text-transform: uppercase;
+}
+
+@media (min-width=360px && max-width=500px){
+    .container{
+        width: 80%;
+        /* margin: 50px; */
+    }
 }
