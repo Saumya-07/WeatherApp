@@ -6,8 +6,7 @@ let weather = {
             `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${this.apiKey}`        )
         .then((response) => response.json())
         .then((data) => this.displayWeather(data))
-        .catch((err) => console.log(err),
-        alert('Location not found :)'));
+        .catch((err) => alert('Location not found :)'));
     },
 
     displayWeather : function(data){
