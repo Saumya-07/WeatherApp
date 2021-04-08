@@ -22,40 +22,34 @@ body{
     /* width: min(500px,100%); */
 }
 .location{
-    height: 10vh;
-    width: max-content;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-between; 
+    margin-bottom: 30px;   
 }
-
 .location input{
-    text-transform: capitalize;
-    background: transparent;
-    border: none;
-    border-radius: 35px;
-    padding: 14px 20px;
-    cursor: pointer;
-    color:#fecd1a;
-    font-size: 25px;
     outline: none;
-    background: #0000001d;
+    font-size: 25px;
+    padding: 14px 20px;
+    border-radius: 9em 0em 0em 9em;
+    border: 2px solid grey;
+    border-right: none;
+    background-color: transparent;
+    color: yellow;
 }
-button.search {
-    border: none;
-    outline:none;
-    border-radius: 999em;
-    padding: 1.5em;
-    background: #0000001d;
-    color: grey;
-    transform: 0.2s ease-in-out;
-    margin: 0px 2em;
+button.search{
+    outline: none;
+    padding: 15px;
+    font-size: 25px;
+    border-radius: 0em 9em 9em 0em;
+    border: 2px solid grey;
+    background-color: transparent;
+    border-left: none;
 }
 svg{
-    font-size: 20px;
+    color:grey;
 }
-.search:hover {
-    background: #0000004d;
+svg:hover{
+    color:yellow;
 }
 h2{
     font-size: 1.6em;
@@ -75,14 +69,18 @@ h2{
     font-size: 40px;
 }
 .temperature-description{
-    /* margin-top: 20px; */
-    
     text-transform: uppercase;
 }
 
-@media (min-width=360px && max-width=500px){
+@media screen and (max-width: 600px) {
+    .location input{
+        width: 180px;
+    }
     .container{
         width: 80%;
-        /* margin: 50px; */
+    }
+    .location{
+        justify-content: flex-start;
     }
 }
+

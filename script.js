@@ -3,9 +3,10 @@ let weather = {
 
     fetchWeather : function(city){
         fetch(
-            `api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${this.apiKey}`        )
+            `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${this.apiKey}`        )
         .then((response) => response.json())
-        .then((data) => this.displayWeather(data));
+        .then((data) => this.displayWeather(data))
+        .catch((err) => alert('Location not found :)'));
     },
 
     displayWeather : function(data){
@@ -13,7 +14,7 @@ let weather = {
         const {temp,humidity} = data.main;
         const {icon, description} = data.weather[0];
         const {speed} = data.wind;
-        // console.log(name , temp , humidity , icon , description , speed);
+        console.log(name , temp , humidity , icon , description , speed);
         
         document.querySelector('h2').innerHTML='Weather in ' + name; 
         document.querySelector('.temperature-degree').innerHTML= Math.floor(temp);
