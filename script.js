@@ -54,7 +54,7 @@ window.addEventListener('load', () => {
             // console.log(lat, long);
             api ='763ee6440fc3ebae8012f486cef21891';
     fetch(
-        `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=metric&appid=${api}`
+        `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=metric&appid=${api}`
     )
     .then((response) => response.json())
     .then((data) => weather.displayWeather(data));
